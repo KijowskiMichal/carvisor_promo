@@ -21,7 +21,6 @@ export class HomePageComponent implements AfterViewInit {
 
   @HostListener('window:scroll', []) onWindowScroll(): void {
     if (!this.block) {
-      console.log("hłe hłe")
       this.block = true;
       const verticalOffset = window.pageYOffset
         || document.documentElement.scrollTop
@@ -29,14 +28,9 @@ export class HomePageComponent implements AfterViewInit {
       try {
         if (verticalOffset > this.rowsPosition[this.currentRow]) {
           this.currentRow = this.currentRow + 1;
-          //this.rows[this.currentRow].nativeElement.scrollIntoView({behavior: 'smooth'});
-          console.log('to next');
         } else if (verticalOffset < this.rowsPosition[this.currentRow]) {
           this.currentRow = this.currentRow - 1;
-          //this.rows[this.currentRow].nativeElement.scrollIntoView({behavior: 'smooth'});
-          console.log('to previous');
         }
-        console.log(this.currentRow);
       } catch (error) {
       }
       setTimeout(() => {

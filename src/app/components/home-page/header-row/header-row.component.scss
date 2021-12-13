@@ -1,5 +1,6 @@
 $font_gray: #C4C4C4;
 $font_dark_gray: #474747;
+$light_mode_background: #ffffff;
 
 .row {
   width: 100%;
@@ -28,7 +29,7 @@ $font_dark_gray: #474747;
       background-color: #118AB2;
       border-radius: 1rem;
       cursor: pointer;
-      color: $font_gray;
+      color: $light_mode_background;
       position: absolute;
       right: 0;
       margin-top: 4rem;

@@ -1,2 +1,14 @@
-<div class="row" >
+<div class="row" [ngClass]="darkmode ? 'row--dark' : 'row--light'" >
+  <div class="row__banner" >
+    <div class="row__banner-wrapper">
+      <div class="row__banner-title">{{ slides[actPage].title }}</div>
+      <div class="row__banner-content">{{ slides[actPage].message }}</div>
+    </div>
+    <img [src]="slides[actPage].image" class="row__banner-image" />
+  </div>
+  <div class="row__arrow-left arrow" (click)="prev()"><fa-icon [icon]="faChevronLeft" Light></fa-icon></div>
+  <div class="row__arrow-right arrow" (click)="next()"><fa-icon [icon]="faChevronRight"></fa-icon></div>
+  <div class="row__shorts" >
+    <div class="row__shorts-item" [class.row__shorts-item--active]="slide === slides[actPage]" *ngFor="let slide of slides">{{ slide.short }}</div>
+  </div>
 </div>

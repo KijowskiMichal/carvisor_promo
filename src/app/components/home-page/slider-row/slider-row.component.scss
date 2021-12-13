@@ -1,6 +1,99 @@
+$dark_slider: #1A1F2B;
+$light_slider: #EAECF0;
+$light_mode_background: #ffffff;
+$black: #000000;
+
 .row {
   width: 100%;
   height: 100vh;
   z-index: 100;
   position: relative;
+
+  .row__banner {
+    width: 70%;
+    height: 65%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -55%);
+    display: flex;
+
+    .row__banner-wrapper {
+      padding: 3rem;
+    }
+
+    .row__banner-title {
+      font-family: Manrope;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 3rem;
+      margin-bottom: 2rem;
+    }
+
+    .row__banner-content {
+      font-family: Manrope;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 1.2rem;
+    }
+
+    .row__banner-image {
+      height: 100%;
+    }
+  }
+
+  .arrow {
+    font-size: 5rem;
+    position: absolute;
+    top: 45%;
+    cursor: pointer;
+  }
+
+  .row__arrow-left {
+    left: 10%;
+  }
+
+  .row__arrow-right {
+    right: 10%;
+  }
+
+  .row__shorts {
+    width: 70%;
+    left: 15%;
+    bottom: 5%;
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+
+  .row__shorts-item {
+    margin: 2rem 3rem;
+    font-family: Manrope;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 2rem;
+  }
+
+  .row__shorts-item--active {
+    border-bottom: 0.15rem solid;
+  }
+}
+
+.row--dark {
+  .row__banner {
+    background-color: $dark_slider;
+  }
+  .row__banner-wrapper, .arrow, .row__shorts-item {
+    color: $light_mode_background;
+  }
+}
+
+.row--light {
+  .row__banner {
+    background-color: $light_slider;
+  }
+  .row__banner-wrapper, .arrow, .row__shorts-item {
+    color: $black;
+  }
 }
