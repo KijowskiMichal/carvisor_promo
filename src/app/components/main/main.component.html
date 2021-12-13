@@ -1,0 +1,19 @@
+<div [ngClass]="darkMode ? 'main-component__wrapper--night-mode' : 'main-component__wrapper--light-mode'">
+  <div class="main-component__header">
+    <div class="main-component__left-header">
+      <div class="main-component__logo"></div>
+      <div class="main-component__logo-letters">CarVisor</div>
+    </div>
+    <div class="main-component__right-header">
+      <div class="main-component__mode-button" (click)="changeMode()"><fa-icon [icon]="faLightbulb"></fa-icon></div>
+      <div class="main-component__download-button">Pobierz teraz</div>
+    </div>
+  </div>
+  <div class="main-component__circle--red"></div>
+  <div class="main-component__circle--blue"></div>
+  <div class="main-component__circle--green"></div>
+  <div class="main-component__circle--yellow"></div>
+  <div class="main-component__dotted-circle main-component__dotted-circle--first"></div>
+  <div class="main-component__dotted-circle main-component__dotted-circle--second"></div>
+  <router-outlet></router-outlet>
+</div>

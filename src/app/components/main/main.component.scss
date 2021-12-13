@@ -1,0 +1,218 @@
+$dark_mode_background: #212a3f;
+$light_mode_background: #ffffff;
+$blue_circle_color: #118AB2;
+$green_circle_color: #06D6A0;
+$red_circle_color: #EF476F;
+$yellow_circle_color: #FFD166;
+$font_gray: #C4C4C4;
+$yellow_button: #FFD166;
+$blue_hover: #118AB2;
+$black: #000000;
+
+$transition_mode: 0.3s;
+$transition_button_hover: 0.2s;
+
+@mixin main-component__wrapper {
+  width: 100%;
+  z-index: 10;
+  position: relative;
+  overflow-x: hidden;
+  transition: $transition_mode;
+}
+
+@mixin circle($color, $top, $right, $size, $index) {
+  width: $size;
+  height: $size;
+  background-color: $color;
+  border-radius: 50%;
+  position: absolute;
+  top: $top;
+  right: $right;
+  z-index: $index;
+}
+
+.main-component__wrapper--night-mode {
+  @include main-component__wrapper();
+  background-color: $dark_mode_background;
+}
+
+.main-component__wrapper--light-mode {
+  @include main-component__wrapper();
+  background-color: $light_mode_background;
+}
+
+.main-component__wrapper--night-mode .main-component__dotted-circle {
+  background-image: url("../../../assets/night-circle.png");
+}
+
+.main-component__wrapper--light-mode .main-component__dotted-circle {
+  background-image: url("../../../assets/circle.png");
+}
+
+.main-component__dotted-circle {
+  position: absolute;
+  z-index: 20;
+}
+
+.main-component__dotted-circle--first {
+  top: 100vh;
+  left: 0;
+  width: 30vw;
+  height: 30vw;
+  transform: translate(-40%, -25vw);
+  background-position: center center;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.main-component__dotted-circle--second {
+  bottom: 0;
+  right: 0;
+  width: 30vw;
+  height: 20vw;
+  transform: translate(30%, 0);
+  background-position: center top;
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+.main-component__circle--blue {
+  @include circle($blue_circle_color, 70vh, -5vh, 50vh, 20);
+}
+
+.main-component__circle--red {
+  @include circle($red_circle_color, 20vh, -8vh, 60vh, 22);
+}
+
+.main-component__circle--green {
+  @include circle($green_circle_color, 60vh, 30vh, 45vh, 24);
+}
+
+.main-component__circle--yellow {
+  @include circle($yellow_circle_color, 40vh, 40vh, 30vh, 24);
+}
+
+.main-component__header {
+  position: fixed;
+  top: 0;
+  width: 100%;
+  float: left;
+  z-index: 900;
+  box-sizing: border-box;
+  padding: 1rem 2rem;
+  transition: $transition_mode;
+}
+
+.main-component__wrapper--night-mode .main-component__header {
+  background-color: $dark_mode_background;
+}
+
+.main-component__wrapper--light-mode .main-component__header {
+  background-color: $light_mode_background;
+}
+
+.main-component__left-header {
+  width: 50%;
+  height: 50px;
+  float: left;
+}
+
+.main-component__right-header {
+  width: 50%;
+  float: left;
+  display: flex;
+  flex-direction: row-reverse;
+}
+
+.main-component__download-button {
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 1.2rem;
+  padding: 0.7rem 1.5rem;
+  margin: 0.25rem;
+  border: 0.15rem solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: $transition_button_hover;
+}
+
+.main-component__wrapper--night-mode .main-component__download-button {
+  color: $font_gray;
+  border-color: $font_gray;
+
+  &:hover {
+    color: $blue_hover;
+    border-color: $blue_hover;
+  }
+}
+
+.main-component__wrapper--light-mode .main-component__download-button {
+  color: $font_gray;
+  border-color: $font_gray;
+
+  &:hover {
+    color: $blue_hover;
+    border-color: $blue_hover;
+  }
+}
+
+.main-component__mode-button {
+  font-size: 1.8rem;
+  padding: 0.4rem 1rem;
+  margin: 0.25rem;
+  border: 0.15rem solid;
+  border-radius: 0.6rem;
+  cursor: pointer;
+  transition: $transition_button_hover;
+}
+
+.main-component__wrapper--night-mode .main-component__mode-button {
+  color: $yellow_button;
+  border-color: $yellow_button;
+
+  &:hover {
+    color: $blue_hover;
+    border-color: $blue_hover;
+  }
+}
+
+.main-component__wrapper--light-mode .main-component__mode-button {
+  color: $font_gray;
+  border-color: $font_gray;
+
+  &:hover {
+    color: $blue_hover;
+    border-color: $blue_hover;
+  }
+}
+
+.main-component__logo {
+  height: 3rem;
+  width: 3.8rem;
+  margin: 0.4rem 0;
+  background-image: url("../../../assets/Logo.png");
+  background-position: center top;
+  background-size: 100%;
+  background-repeat: no-repeat;
+  float: left;
+}
+
+.main-component__logo-letters {
+  font-family: Manrope;
+  font-style: normal;
+  font-weight: 500;
+  font-size: 2.2rem;
+  margin: 0.4rem 1rem;
+  cursor: pointer;
+  transition: $transition_mode;
+  float: left;
+}
+
+.main-component__wrapper--night-mode .main-component__logo-letters {
+  color: $font_gray;
+}
+
+.main-component__wrapper--light-mode .main-component__logo-letters {
+  color: $black;
+}
