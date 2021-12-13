@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit, ViewEncapsulation} from '@angular/core';
 import {faLightbulb, IconDefinition} from '@fortawesome/free-solid-svg-icons';
+import {MainService} from './main.service';
 
 @Component({
   selector: 'app-main',
@@ -11,13 +12,15 @@ export class MainComponent implements OnInit {
   darkMode = true;
   faLightbulb: IconDefinition = faLightbulb;
 
-  constructor() { }
+  constructor(public mainService: MainService) { }
 
   ngOnInit(): void {
+    this.mainService.darkMode.subscribe((value) => {
+      this.darkMode = value;
+    });
   }
 
   changeMode(): void {
-    this.darkMode = !this.darkMode;
-    console.log(this.darkMode);
+    this.mainService.darkMode.next(!this.darkMode);
   }
 }

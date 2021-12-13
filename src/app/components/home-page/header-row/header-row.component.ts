@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import {MainService} from '../../main/main.service';
 
 @Component({
   selector: 'app-header-row',
@@ -7,9 +8,14 @@ import { Component, OnInit } from '@angular/core';
 })
 export class HeaderRowComponent implements OnInit {
 
-  constructor() { }
+  darkmode = true;
+
+  constructor(public mainService: MainService) { }
 
   ngOnInit(): void {
+    this.mainService.darkMode.subscribe((value) => {
+      this.darkmode = value;
+    });
   }
 
 }

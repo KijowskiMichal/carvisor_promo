@@ -1,6 +1,49 @@
+$font_gray: #C4C4C4;
+$font_dark_gray: #474747;
+
 .row {
   width: 100%;
   height: 100vh;
-  background-color: red;
   z-index: 100;
+  position: relative;
+
+  .row__banner {
+    position: absolute;
+    top: 20%;
+    left: 10rem;
+
+    .row__banner-text {
+      font-family: Manrope;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 4rem;
+    }
+
+    .row__banner-button {
+      font-family: Manrope;
+      font-style: normal;
+      font-weight: 300;
+      font-size: 1.2rem;
+      padding: 1rem 1.5rem;
+      background-color: #118AB2;
+      border-radius: 1rem;
+      cursor: pointer;
+      color: $font_gray;
+      position: absolute;
+      right: 0;
+      margin-top: 4rem;
+    }
+  }
+}
+
+.row--dark {
+  .row__banner-text {
+    color: $font_gray;
+  }
+}
+
+.row--light {
+  .row__banner-text {
+    color: $font_dark_gray;
+  }
 }
