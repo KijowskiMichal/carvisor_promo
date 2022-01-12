@@ -22,6 +22,7 @@
     "@fortawesome/angular-fontawesome": "^0.8.2",
     "@fortawesome/fontawesome-svg-core": "^1.2.34",
     "@fortawesome/free-solid-svg-icons": "^5.15.2",
+    "ngx-device-detector": "^1.4.5",
     "ngx-free-fullpage": "^1.0.1-beta.1",
     "ngx-fullpage": "^5.1.0",
     "ngx-page-scroll-core": "^7.0.6",

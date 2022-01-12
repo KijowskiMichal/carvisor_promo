@@ -1,6 +1,138 @@
+$dark_slider: #1A1F2B;
+$light_slider: #EAECF0;
+$light_mode_background: #ffffff;
+$black: #000000;
+$iot: #118AB2;
+$terminal: #FFD166;
+$web: #EF476F;
+$android: #06D6A0;
+
 .row {
   width: 100%;
   height: 100vh;
   z-index: 100;
   position: relative;
+
+  .row__banner {
+    width: 70%;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -55%);
+    display: flex;
+    gap: 25px;
+
+    .row__banner-item {
+      flex: 1 1 0;
+      box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      font-family: Manrope;
+      font-style: normal;
+      text-align: center;
+
+      .banner-item__image {
+        width: 60%;
+        margin: 2rem 20%;
+      }
+
+      .banner-item__title {
+        font-weight: 500;
+        font-size: 2rem;
+        padding: 10px;
+      }
+
+      .banner-item__text {
+        font-weight: 300;
+        font-size: 1.2rem;
+        margin-bottom: 2rem;
+      }
+
+      .banner-item__download {
+        color: $light_mode_background;
+        padding: 0.6rem 3rem;
+        font-size: 1.2rem;
+        margin-top: auto;
+        border-radius: 0.6rem;
+        cursor: pointer;
+      }
+
+      .banner-item__download--iot {
+        background-color: $iot;
+      }
+
+      .banner-item__download--teminal {
+        background-color: $terminal;
+      }
+
+      .banner-item__download--web {
+        background-color: $web;
+      }
+
+      .banner-item__download--android {
+        background-color: $android;
+      }
+
+      .banner-item__manual {
+        padding: 0.6rem 1rem;
+        margin-top: 1rem;
+        font-size: 1.2rem;
+        border-radius: 0.6rem;
+        border: solid 2px;
+        margin-bottom: 2rem;
+        cursor: pointer;
+      }
+    }
+  }
+}
+
+.row--dark {
+  .row__banner-item {
+    background-color: $dark_slider;
+  }
+  .row__banner-item {
+    color: $light_mode_background;
+  }
+  .banner-item__manual {
+    color: $light_mode_background;
+    border-color: $light_mode_background;
+  }
+}
+
+.row--light {
+  .row__banner-item {
+    background-color: $light_slider;
+  }
+  .row__banner-item {
+    color: $black;
+  }
+  .banner-item__manual--iot {
+    color: $iot;
+    border-color: $iot;
+  }
+  .banner-item__manual--terminal {
+    color: $terminal;
+    border-color: $terminal;
+  }
+  .banner-item__manual--web {
+    color: $web;
+    border-color: $web;
+  }
+  .banner-item__manual--android {
+    color: $android;
+    border-color: $android;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .row {
+    height: auto !important;
+  }
+  .row__banner {
+    flex-direction: column;
+    transform: translate(-50%, 0) !important;
+    padding-bottom: 2rem;
+    float: left;
+  }
 }

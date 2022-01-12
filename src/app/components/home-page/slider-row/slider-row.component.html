@@ -9,6 +9,6 @@
   <div class="row__arrow-left arrow" (click)="prev()"><fa-icon [icon]="faChevronLeft" Light></fa-icon></div>
   <div class="row__arrow-right arrow" (click)="next()"><fa-icon [icon]="faChevronRight"></fa-icon></div>
   <div class="row__shorts" >
-    <div class="row__shorts-item" [class.row__shorts-item--active]="slide === slides[actPage]" *ngFor="let slide of slides">{{ slide.short }}</div>
+    <div class="row__shorts-item" [class.row__shorts-item--active]="slide === slides[actPage]" (click)="choose(i)" *ngFor="let slide of slides; let i = index">{{ slide.short }}</div>
   </div>
 </div>

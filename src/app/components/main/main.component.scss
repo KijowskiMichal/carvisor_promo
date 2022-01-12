@@ -216,3 +216,19 @@ $transition_button_hover: 0.2s;
 .main-component__wrapper--light-mode .main-component__logo-letters {
   color: $black;
 }
+
+
+@media screen and (max-width: 992px) {
+  .main-component__left-header {
+    width: 100%;
+  }
+  .main-component__right-header {
+    width: 100%;
+    margin-bottom: 1rem;
+  }
+  .main-component__header {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column-reverse;
+  }
+}

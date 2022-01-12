@@ -48,3 +48,30 @@ $light_mode_background: #ffffff;
     color: $font_dark_gray;
   }
 }
+
+@media screen and (max-width: 992px) {
+  :root {
+    font-size: 16px;
+  }
+  .row__banner {
+    position: relative !important;
+    box-sizing: border-box;
+    top: 0 !important;
+    left: 0 !important;
+    margin-top: 30%;
+    width: 100%;
+    padding: 5rem;
+  }
+  .row__banner-text {
+    font-size: 3rem !important;
+  }
+  .row__banner-button {
+    margin-right: 2rem;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  :root {
+    font-size: 14px;
+  }
+}

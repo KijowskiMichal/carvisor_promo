@@ -18,4 +18,7 @@ export class HeaderRowComponent implements OnInit {
     });
   }
 
+  showMore(): void {
+    this.mainService.scrollToSlider.next();
+  }
 }

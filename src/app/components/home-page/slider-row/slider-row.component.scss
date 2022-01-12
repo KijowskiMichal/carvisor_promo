@@ -17,6 +17,7 @@ $black: #000000;
     top: 50%;
     transform: translate(-50%, -55%);
     display: flex;
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 13px 27px -5px, rgba(0, 0, 0, 0.3) 0px 8px 16px -8px;
 
     .row__banner-wrapper {
       padding: 3rem;
@@ -73,6 +74,7 @@ $black: #000000;
     font-style: normal;
     font-weight: 500;
     font-size: 2rem;
+    cursor: pointer;
   }
 
   .row__shorts-item--active {
@@ -95,5 +97,34 @@ $black: #000000;
   }
   .row__banner-wrapper, .arrow, .row__shorts-item {
     color: $black;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .row__banner-image {
+    display: none;
+  }
+  .row__banner-title {
+    font-size: 1.5rem !important;
+  }
+  .row__banner-content {
+    font-size: 1rem !important;
+  }
+  .row__banner {
+    height: auto !important;
+    position: relative !important;
+    left: 15%;
+  }
+  .arrow {
+    font-size: 3rem !important;
+  }
+  .row__arrow-left {
+    left: 1rem !important;
+  }
+  .row__arrow-right {
+    right: 1rem !important;
+  }
+  .row__shorts {
+    display: none !important;
   }
 }

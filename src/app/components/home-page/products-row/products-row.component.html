@@ -1,2 +1,32 @@
-<div class="row" >
+<div class="row" [ngClass]="darkmode ? 'row--dark' : 'row--light'" >
+  <div class="row__banner" >
+    <div class="row__banner-item">
+      <img class="banner-item__image" src="assets/Cpu.png" />
+      <div class="banner-item__title">Aplikacja IoT</div>
+      <div class="banner-item__text">Aplikacja na Raspberry Pi z czytnikiem OBD</div>
+      <div class="banner-item__download banner-item__download--iot">Pobierz</div>
+      <div class="banner-item__manual banner-item__manual--iot">Instrukcja obsługi</div>
+    </div>
+    <div class="row__banner-item">
+      <img class="banner-item__image" src="assets/Terminal.png" />
+      <div class="banner-item__title">Aplikacja serwerowa</div>
+      <div class="banner-item__text">Aplikacja łącząca system IoT z aplikacją kliencką</div>
+      <div class="banner-item__download banner-item__download--teminal">Pobierz</div>
+      <div class="banner-item__manual banner-item__manual--terminal">Instrukcja obsługi</div>
+    </div>
+    <div class="row__banner-item">
+      <img class="banner-item__image" src="assets/Monitor.png" />
+      <div class="banner-item__title">Aplikacja webowa</div>
+      <div class="banner-item__text">Aplikacja do obsługi naszego systemu z poziomu przeglądarki</div>
+      <div class="banner-item__download banner-item__download--web">Pobierz</div>
+      <div class="banner-item__manual banner-item__manual--web">Instrukcja obsługi</div>
+    </div>
+    <div class="row__banner-item">
+      <img class="banner-item__image" src="assets/AndroidLogo.png" />
+      <div class="banner-item__title">Aplikacja na systemy Android</div>
+      <div class="banner-item__text">Aplikacja mobilna do obsługi systemu</div>
+      <div class="banner-item__download banner-item__download--android">Pobierz</div>
+      <div class="banner-item__manual banner-item__manual--android">Instrukcja obsługi</div>
+    </div>
+  </div>
 </div>

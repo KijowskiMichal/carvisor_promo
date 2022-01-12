@@ -23,4 +23,8 @@ export class MainComponent implements OnInit {
   changeMode(): void {
     this.mainService.darkMode.next(!this.darkMode);
   }
+
+  scrollToProducts(): void {
+    this.mainService.scrollToProducts.next();
+  }
 }
