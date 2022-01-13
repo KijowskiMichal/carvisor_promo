@@ -15,37 +15,8 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   @ViewChild('second') second!: ElementRef;
   @ViewChild('third') third!: ElementRef;
 
-  milisFromLastEvent = 0;
-  currentRow = 0;
   rowsPosition = [0, 0, 0];
   rows = [this.first, this.second, this.third];
-  block = false;
-
-  @HostListener('window:scroll', []) onWindowScroll(): void {
-    if ((!this.block) && (this.deviceService.isDesktop())) {
-      this.block = true;
-      const verticalOffset = window.pageYOffset
-        || document.documentElement.scrollTop
-        || document.body.scrollTop || 0;
-      try {
-        if (verticalOffset > this.rowsPosition[this.currentRow]) {
-          this.currentRow = this.currentRow + 1;
-        } else if (verticalOffset < this.rowsPosition[this.currentRow]) {
-          this.currentRow = this.currentRow - 1;
-        }
-      } catch (error) {
-      }
-      setTimeout(() => {
-        this.rows[this.currentRow].nativeElement.scrollIntoView({behavior: 'smooth'});
-      }, 200);
-      setTimeout(() => {
-        this.checkPositionAndFix();
-      }, 400);
-      setTimeout(() => {
-        this.block = false;
-      }, 800);
-    }
-  }
 
   constructor(public mainService: MainService, private deviceService: DeviceDetectorService) {}
 
@@ -58,14 +29,6 @@ export class HomePageComponent implements OnInit, AfterViewInit {
     });
   }
 
-  checkPositionAndFix(): void {
-    const verticalOffset = window.pageYOffset
-      || document.documentElement.scrollTop
-      || document.body.scrollTop || 0;
-    if (verticalOffset !== this.rowsPosition[this.currentRow]) {
-      this.rows[this.currentRow].nativeElement.scrollIntoView({behavior: 'smooth'});
-    }
-  }
 
   ngAfterViewInit(): void {
     this.rowsPosition[0] = this.first.nativeElement.getBoundingClientRect().y;
@@ -75,41 +38,19 @@ export class HomePageComponent implements OnInit, AfterViewInit {
   }
 
   scrollToProducts(): void {
-    if ((!this.block) && (this.deviceService.isDesktop())) {
-      this.block = true;
-      this.currentRow = 2;
-      this.rows[this.currentRow].nativeElement.scrollIntoView({behavior: 'smooth'});
-      setTimeout(() => {
-        this.rows[this.currentRow].nativeElement.scrollIntoView({behavior: 'smooth'});
-      }, 200);
-      setTimeout(() => {
-        this.checkPositionAndFix();
-      }, 400);
-      setTimeout(() => {
-        this.block = false;
-      }, 800);
+    if (this.deviceService.isDesktop()) {
+      this.rows[2].nativeElement.scrollIntoView({behavior: 'smooth'});
     }
-    if (!this.deviceService.isDesktop()) {
+    else {
       this.rows[2].nativeElement.scrollIntoView();
     }
   }
 
   scrollToSlider(): void {
-    if ((!this.block) && (this.deviceService.isDesktop())) {
-      this.block = true;
-      this.currentRow = 1;
-      this.rows[this.currentRow].nativeElement.scrollIntoView({behavior: 'smooth'});
-      setTimeout(() => {
-        this.rows[this.currentRow].nativeElement.scrollIntoView({behavior: 'smooth'});
-      }, 200);
-      setTimeout(() => {
-        this.checkPositionAndFix();
-      }, 400);
-      setTimeout(() => {
-        this.block = false;
-      }, 800);
+    if (this.deviceService.isDesktop()) {
+      this.rows[1].nativeElement.scrollIntoView({behavior: 'smooth'});
     }
-    if (!this.deviceService.isDesktop()) {
+    else {
       this.rows[1].nativeElement.scrollIntoView();
     }
   }
