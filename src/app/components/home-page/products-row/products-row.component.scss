@@ -3,9 +3,13 @@ $light_slider: #EAECF0;
 $light_mode_background: #ffffff;
 $black: #000000;
 $iot: #118AB2;
+$iot_hover: #63adc4;
 $terminal: #FFD166;
+$terminal_hover: #fdeab3;
 $web: #EF476F;
+$web_hover: #f58294;
 $android: #06D6A0;
+$android_hover: #94e3c6;
 
 .row {
   width: 100%;
@@ -62,16 +66,32 @@ $android: #06D6A0;
         background-color: $iot;
       }
 
+      .banner-item__download--iot:hover {
+        background-color: $iot_hover;
+      }
+
       .banner-item__download--teminal {
         background-color: $terminal;
+      }
+
+      .banner-item__download--teminal:hover {
+        background-color: $terminal_hover;
       }
 
       .banner-item__download--web {
         background-color: $web;
       }
 
+      .banner-item__download--web:hover {
+        background-color: $web_hover;
+      }
+
       .banner-item__download--android {
         background-color: $android;
+      }
+
+      .banner-item__download--android:hover {
+        background-color: $android_hover;
       }
 
       .banner-item__manual {
@@ -111,17 +131,33 @@ $android: #06D6A0;
     color: $iot;
     border-color: $iot;
   }
+  .banner-item__manual--iot:hover {
+    color: $iot_hover;
+    border-color: $iot_hover;
+  }
   .banner-item__manual--terminal {
     color: $terminal;
     border-color: $terminal;
+  }
+  .banner-item__manual--terminal:hover {
+    color: $terminal_hover;
+    border-color: $terminal_hover;
   }
   .banner-item__manual--web {
     color: $web;
     border-color: $web;
   }
+  .banner-item__manual--web:hover {
+    color: $web_hover;
+    border-color: $web_hover;
+  }
   .banner-item__manual--android {
     color: $android;
     border-color: $android;
+  }
+  .banner-item__manual--android:hover {
+    color: $android_hover;
+    border-color: $android_hover;
   }
 }
 

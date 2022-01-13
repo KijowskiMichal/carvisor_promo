@@ -20,16 +20,28 @@ export class SliderRowComponent implements OnInit, OnDestroy {
 
   slides: SliderPage[] = [
     {
-      title: 'Lorem ipsum dolor sid amet',
-      message: 'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.',
-      image: '../assets/image_1.png',
-      short: 'Pierwszy',
+      title: 'Czym jest CarVisor?',
+      message: 'CarVisor to rozbudowany system kontroli floty przeznaczony dla małych i średnich firm oraz użytkowników prywatnych, pozwalający na monitoring pojazdów w czasie rzeczywistym oraz podgląd danych historycznych. Nasi klienci zyskają możliwość rejestrowania najważniejszych parametrów pojazdu, lokalizację oraz historię przebytych tras. Jest to projekt Open Source na licencji GNU GPLv3. Zbuduj własne urządzenie, pobierz potrzebne pliki i zacznij korzystać z CarVisor!',
+      image: '../assets/image_2.png',
+      short: 'CarVisor',
     },
     {
-      title: ' Ipsum dolor sid amet sid dolor ipsum lorem',
-      message: 'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta sunt explicabo. Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit, sed quia consequuntur magni dolores eos qui ratione voluptatem sequi nesciunt. Neque porro quisquam est, qui dolorem ipsum quia dolor sit amet, consectetur, adipisci velit, sed quia non numquam eius modi tempora incidunt ut labore et dolore magnam aliquam quaerat voluptatem.',
-      image: '../assets/image_2.png',
-      short: 'Drugi',
+      title: 'Wiele korzyści za niewygórowaną cenę',
+      message: 'Koszty wdrożenia konkurencyjnych systemów kontroli floty są duże, środowisko takiej architektury jest zamknięte, co utrudnia integrację z innymi systemami. CarVisor oferuje modułową budowę, użytkownik może dostosować urządzenie do swoich potrzeb, dodatkowo dzięki otwartości projektu, pozwala on na zintegrowanie go z innymi aplikacjami dzięki przygotowanemu API. W przeciwieństwie do większości konkurencyjnych systemów nasz projekt nastawiony jest również na użytkowników prywatnych, którzy chcieliby mieć większą kontrolę nad swoim pojazdem.',
+      image: '../assets/image_1.png',
+      short: 'Otwartość',
+    },
+    {
+      title: 'Z nami oszczędzisz pieniądze',
+      message: 'Nasi klienci dzięki ciągłemu monitorowaniu techniki jazdy będą mogli się cieszyć oszczędnością pieniędzy związaną z mniejszymi kosztami paliwa i będą mieli pełny podgląd na prędkość, obroty, przebieg, lokalizację oraz błędy pojazdu. Dzięki otwartości i modularnej budowie systemu będą mieli możliwość dostosowania naszego projektu pod własne potrzeby, uruchomienie aplikacji serwerowej na własnych systemach, bez przymusu uzależniania się od usług innych firm.',
+      image: '../assets/image_3.png',
+      short: 'Oszczędność',
+    },
+    {
+      title: 'Funkcjonalne dla firm i użytkowników prywatnych',
+      message: 'Kierujemy nasz system głównie do firm, które nie posiadają żadnego systemu kontroli floty lub wykorzystują drogie, komercyjne rozwiązania i szukają korzystniejszego cenowo produktu. Naszym celem jest stworzenie produktu który będzie dorównywał a nawet przewyższał w liczbie funkcjonalności konkurencje, wszystko to przy zachowaniu niskich kosztów nabycia i utrzymania całej platformy.',
+      image: '../assets/image_4.png',
+      short: 'Funkcjonalność',
     }
   ];
 
