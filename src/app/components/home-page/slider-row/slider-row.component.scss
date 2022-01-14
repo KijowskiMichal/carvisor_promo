@@ -100,6 +100,18 @@ $black: #000000;
   }
 }
 
+@media screen and (max-width: 1280px) {
+  .row__banner-title {
+    font-size: 1.3rem !important;
+  }
+  .row__banner-content {
+    font-size: 0.9rem !important;
+  }
+  .row__shorts-item {
+    font-size: 1.5rem;
+  }
+}
+
 @media screen and (max-width: 992px) {
   .row__banner-image {
     display: none;
